@@ -22,39 +22,66 @@ function playerSelection(playerInput){
 
 function playRound(playerSelection, computerSelection){
     if (playerSelection === rock && computerSelection === rock){
-        return "tie";
+        //return "tie";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>tie</h2>";
     }
     else if (playerSelection === rock && computerSelection === paper){
         computerScore++
-        return " Computer wins, paper beats rock";
+        //return " Computer wins, paper beats rock";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>Computer!</h2> Paper beats rock";
     }
     else if (playerSelection === rock && computerSelection === scissors){
         playerScore++
-        return "Player wins, rock beats scissors";
+        //return "Player wins, rock beats scissors";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>You!</h2> Rock beats scissors";
     }
     else if (playerSelection === paper && computerSelection === paper){
-        return "tie";
+        //return "tie";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>tie</h2>";
     }
     else if (playerSelection === paper && computerSelection === scissors){
         computerScore++
-        return "Computer wins, scissors cut paper";
+        //return "Computer wins, scissors cut paper";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>Computer!</h2> Scissors cut paper";
         
     }
     else if (playerSelection === paper && computerSelection === rock){
         playerScore++
-        return "Player wins, paper beats rock";
+        //return "Player wins, paper beats rock";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>You!</h2> Paper beats rock";
         
     }
     else if (playerSelection === scissors && computerSelection === scissors){
-        return "tie";
+        //return "tie";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>tie</h2>";
     }
     else if (playerSelection === scissors && computerSelection === rock){
         computerScore++
-        return "Computer wins, rock beats scissors";
+       //return "Computer wins, rock beats scissors";
+       document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>Computer!</h2> Rock beats scissors";
     }
     else if (playerSelection === scissors && computerSelection === paper){
         playerScore++
-        return "Player wins, scissors cut paper";
+        //return "Player wins, scissors cut paper";
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "The winner is:<h2>You!</h2> Scissors cut paper";
     }
 
 
