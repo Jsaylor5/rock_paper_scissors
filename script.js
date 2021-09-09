@@ -11,8 +11,13 @@ function computerPlay(){
    return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function playerPlay(){
-    return prompt("Please type rock, paper, or scissors").toLowerCase();
+//function playerPlay(){
+    //return prompt("Please type rock, paper, or scissors").toLowerCase();
+//}
+
+function playerSelection(playerInput){
+    return playerInput;
+
 }
 
 function playRound(playerSelection, computerSelection){
@@ -55,27 +60,24 @@ function playRound(playerSelection, computerSelection){
 
 }
 const rockBtn = document.querySelector('#rock');
-rockBtn.addEventListener('click',playerSelection => {
-    playRound(rock)
-    console.log('rock')
+rockBtn.addEventListener('click', () => {
+    console.log(playRound(playerSelection(rock),computerPlay()));
 });
 
 const paperBtn = document.querySelector('#paper');
-paperBtn.addEventListener('click', playerSelection => {
-    playRound(paper)
-    console.log('paper')
+paperBtn.addEventListener('click', () => {
+   console.log(playRound(playerSelection(paper),computerPlay()));
 });
 
 const scissorsBtn = document.querySelector('#scissors');
-scissorsBtn.addEventListener('click', playerSelection => {
-    playRound(scissors)
-    console.log('scissors')
+scissorsBtn.addEventListener('click', ()=> {
+    console.log(playRound(playerSelection(scissors), computerPlay()));
 });
 
 
 function game(){
     
-    playerSelection = playerPlay();
+    //playerSelection = playerPlay();
     const computerSelection = computerPlay();
     console.log(playRound(playerSelection, computerSelection));
 
