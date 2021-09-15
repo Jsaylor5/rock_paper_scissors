@@ -10,12 +10,14 @@ function checkScore(){
     if(playerScore == 5){document.getElementById("result").innerHTML ="";
     document.getElementById("result").innerHTML +=
     "<h2>Player wins!</h2>";
+    resetGame();
     }
 
-    else if(computerScore ==5){
+    else if(computerScore == 5){
         document.getElementById("result").innerHTML ="";
         document.getElementById("result").innerHTML +=
-        "<h2>Computer wins!</h2>";
+        "<h2>Computer wins!</h2>"; 
+        resetGame();
     }
 }
 
@@ -109,9 +111,20 @@ scissorsBtn.addEventListener('click', ()=> {
 score = "player score: " + playerScore + " " + "computer score: " + computerScore
 //second instance of score displays 0 and 0 at the beginning of the game instead of the DOM object
 
-const displayScore = document.querySelector('#score');
+ const displayScore = document.querySelector('#score');
 
 const playerScoreDisplay = document.createElement('div');
 playerScoreDisplay.classList.add('playerScoreDisplay');
 playerScoreDisplay.textContent = (score);
 displayScore.appendChild(playerScoreDisplay);
+
+function resetGame(){const resetButton = document.querySelector('#result');
+
+const resetButtonDisplay = document.createElement('button');
+resetButtonDisplay.classList.add('resetButtonDisplay');
+resetButtonDisplay.textContent = "play again?"
+resetButton.appendChild(resetButtonDisplay);
+resetButton.addEventListener('click', () => {
+    window.location.reload();
+});
+}
