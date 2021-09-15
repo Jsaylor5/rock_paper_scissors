@@ -1,0 +1,31 @@
+#rock{
+    background-image: url('images/rock.jpg');
+    padding: 100px 100px;
+    
+    
+}
+#paper{
+    background-image: url('images/paper.jpg');
+    padding: 100px 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 100px;
+    
+}
+#scissors{
+    background-image: url('images/scissors.jpg');
+    padding: 100px 100px;
+    margin-top: 100px;
+    
+}
+#score{
+    margin: inherit;
+    text-align: center;
+    margin-top: auto;
+
+}
+#wrap{
+width: 900px;
+margin: auto;
+text-align: center;
+}
