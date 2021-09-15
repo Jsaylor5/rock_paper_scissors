@@ -6,6 +6,18 @@ scissors = choices[2]
 playerScore = 0
 computerScore = 0
 
+function checkScore(){
+    if(playerScore == 5){document.getElementById("result").innerHTML ="";
+    document.getElementById("result").innerHTML +=
+    "<h2>Player wins!</h2>";
+    }
+
+    else if(computerScore ==5){
+        document.getElementById("result").innerHTML ="";
+        document.getElementById("result").innerHTML +=
+        "<h2>Computer wins!</h2>";
+    }
+}
 
 function computerPlay(){
    return choices[Math.floor(Math.random() * choices.length)];
@@ -17,6 +29,7 @@ function playerSelection(playerInput){
 }
 
 function playRound(playerSelection, computerSelection){
+  
     if (playerSelection === rock && computerSelection === rock){
         document.getElementById("result").innerHTML ="";
         document.getElementById("result").innerHTML +=
@@ -71,9 +84,9 @@ function playRound(playerSelection, computerSelection){
         "<h2>Scissors cut paper</h2>";
     }
 
-    
     let score = "player score: " + playerScore + " " + "computer score: " + computerScore
     document.getElementById("score").innerHTML = score;
+    checkScore();
 };
 
 const rockBtn = document.querySelector('#rock');
