@@ -22,16 +22,18 @@ function checkScore(){
 }
 
 function computerPlay(){
+    if(computerScore <5){
    return choices[Math.floor(Math.random() * choices.length)];
-}
+}}
 
 function playerSelection(playerInput){
+    if(playerScore < 5){
     return playerInput;
-
+    }
 }
 
 function playRound(playerSelection, computerSelection){
-  
+
     if (playerSelection === rock && computerSelection === rock){
         document.getElementById("result").innerHTML ="";
         document.getElementById("result").innerHTML +=
